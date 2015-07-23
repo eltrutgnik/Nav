@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:text="@string/hello_world"
+        android:id="@+id/testview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@color/PrimaryColor"
-        android:padding="8dp"
-        android:text="INBOX"
-        android:textColor="#fff"
-        android:textSize="28sp" />
-</RelativeLayout>
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mill_dia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/diameter"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/mill_sfm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sfm"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mill_rpm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/RPM"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mill_num_teeth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/num_teeth"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mill_chipload"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/chipload"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mill_feed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/feedrate"
+            android:inputType="numberDecimal" />
+
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
