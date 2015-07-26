@@ -57,12 +57,7 @@ public class ContentFragment extends Fragment {
 
         dia.addTextChangedListener(new ReturnValueFromEditText(dia, sfm, rpm));
         sfm.addTextChangedListener(new SurfaceFoot(dia,sfm, rpm));
-
-
-
-       // Snackbar.make(getApplicationContext(), "sfm", Snackbar.LENGTH_LONG).show();
-
-        //textView.setText("You have entered : " + sfm);
+        rpm.addTextChangedListener(new GetRpm(dia,sfm, rpm));
 
 
 

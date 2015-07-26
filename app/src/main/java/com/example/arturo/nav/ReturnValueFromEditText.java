@@ -12,7 +12,7 @@ public class ReturnValueFromEditText implements TextWatcher {
     private Double mDia;
     private Double mSfm;
     private Double mRpm;
-    public double calculatedRPM;
+    private double calculatedRPM;
 
     private String mDiaString;
     private String mSfmString;

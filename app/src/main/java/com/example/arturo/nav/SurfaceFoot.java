@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class SurfaceFoot implements TextWatcher {
 
 
-    public Double mSfm;
+    private Double mSfm;
 
     private String mSfmString;
     private EditText mEditText;
@@ -21,7 +21,7 @@ public class SurfaceFoot implements TextWatcher {
     public double calculatedRPM;
 
 
-    public  SurfaceFoot(EditText d, EditText e, EditText s){
+    public SurfaceFoot(EditText d, EditText e, EditText s) {
 
         mEditText = e;
         mEditTexttwo = s;
@@ -56,27 +56,29 @@ public class SurfaceFoot implements TextWatcher {
             mSfmString = String.valueOf(mEditText.getText());
             mDiaString = String.valueOf(mEditTextthree.getText());
 
-            //check if sfmtest begins with a number
-            if (Character.isDigit(mSfmString.charAt(0))) {
-                mSfmString = String.valueOf(mEditText.getText());
-            } else {
-                mSfmString = "0" + String.valueOf(mEditText.getText());
+            if (mDiaString.length() != 0) {
+                //check if sfmtest begins with a number
+                if (Character.isDigit(mSfmString.charAt(0))) {
+                    mSfmString = String.valueOf(mEditText.getText());
+                } else {
+                    mSfmString = "0" + String.valueOf(mEditText.getText());
+                }
+
+                if (Character.isDigit(mDiaString.charAt(0))) {
+                    mDiaString = String.valueOf(mEditTextthree.getText());
+                } else {
+                    mDiaString = "0" + String.valueOf(mEditTextthree.getText());
+                }
+
+
+                mSfm = Double.valueOf(mSfmString);
+                mDia = Double.valueOf(mDiaString);
+
+
+                calculatedRPM = mSfm / mDia * 3.82;
+                //mEditTexttwo.setText("hi");
+                mEditTexttwo.setText("" + calculatedRPM);
             }
-
-            if (Character.isDigit(mDiaString.charAt(0))) {
-                mDiaString = String.valueOf(mEditTextthree.getText());
-            } else {
-                mDiaString = "0" + String.valueOf(mEditTextthree.getText());
-            }
-
-
-            mSfm = Double.valueOf(mSfmString);
-            mDia = Double.valueOf(mDiaString);
-
-
-            calculatedRPM = mSfm / mDia * 3.82;
-            //mEditTexttwo.setText("hi");
-            mEditTexttwo.setText("" + calculatedRPM);
 
 
         }
