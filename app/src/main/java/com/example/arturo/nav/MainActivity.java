@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     //Replacing the main content with ContentFragment Which is our Inbox View;
-                    case R.id.inbox:
-                        Toast.makeText(getApplicationContext(), "Inbox Selected", Toast.LENGTH_SHORT).show();
+                    case R.id.milling:
                         ContentFragment fragment = new ContentFragment();
                         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment);
@@ -61,10 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
                     // For rest of the options we just show a toast on click
 
-                    case R.id.starred:
-                        Toast.makeText(getApplicationContext(), "Stared Selected", Toast.LENGTH_SHORT).show();
+                    case R.id.turning:
+                        LatheFragment latheFragment = new LatheFragment();
+                        android.support.v4.app.FragmentTransaction latheFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        latheFragmentTransaction.replace(R.id.frame, latheFragment);
+                        latheFragmentTransaction.commit();
                         return true;
-                    case R.id.sent_mail:
+                    case R.id.drilling:
                         Toast.makeText(getApplicationContext(), "Send Selected", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.drafts:

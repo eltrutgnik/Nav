@@ -6,22 +6,22 @@
          
                
         <item
-            android:id="@+id/inbox"
+            android:id="@+id/milling"
             android:checked="false"
             android:icon="@drawable/ic_inbox_black"
-            android:title="@string/inbox_string" />
+            android:title="@string/mill_string" />
          
         <item
-            android:id="@+id/starred"
+            android:id="@+id/turning"
             android:checked="false"
             android:icon="@drawable/ic_star_black"
-            android:title="@string/starred_string" />
+            android:title="@string/lathe_string" />
 
         <item
-            android:id="@+id/sent_mail"
+            android:id="@+id/drilling"
             android:checked="false"
             android:icon="@drawable/ic_send_black"
-            android:title="@string/sent_mail_string" />
+            android:title="@string/drill_srting" />
 
         <item
             android:id="@+id/drafts"
